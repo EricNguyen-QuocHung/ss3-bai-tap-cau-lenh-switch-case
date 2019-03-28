@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function checkDateNumber() {
+            let inputMonth = parseInt(document.getElementById("month").value);
+            console.log(inputMonth);
+            //console.log(typeof (inputMonth));
+            switch (true) {
+                case (inputMonth == 1||inputMonth == 3||inputMonth == 5||inputMonth == 7||inputMonth == 8||inputMonth == 10||inputMonth == 12):
+                    console.log("Thang co 31 ngay");
+                    break;
+                case (inputMonth == 2):
+                    console.log("Thang co 28 hoac 29 ngay");
+                    break;
+                case (inputMonth == 4||inputMonth == 6||inputMonth == 9||inputMonth == 11):
+                    console.log("Thang co 30 ngay");
+                    break;
+                default:
+                    console.log("So khong hop le");
+                    break;
+            }
+        }
+
+    </script>
+</head>
+    <input type="number" id="month" aria-placeholder="Thang can kiem tra">
+    <button type="button" onclick="checkDateNumber()">Tinh so ngay</button>
+
+<body>
+
+</body>
+</html>
